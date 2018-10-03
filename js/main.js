@@ -1,12 +1,4 @@
 
-const setNext = () => {
-    const body = document.querySelector('body');
-    const amount = 0;
-    body.setAttribute('style', `background-position-x: %`);
-};
-
-
-
 class Move {
     constructor() {
         this.position = 0;
