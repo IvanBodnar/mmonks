@@ -14,21 +14,39 @@ class Move {
             5: 65,
             6: 80,
             7: 100,
-            8: 110
+            8: 100,
+            9: 110
         };
     }
 
-
     next() {
+        this.hideText(this.frame);
         this.frame += 1;
+        this.showText(this.frame);
         this.body.setAttribute('style', `background-position-x: ${this.frames[this.frame]}%`);
-        console.log(this.frame);
     }
 
     prev() {
+        this.hideText(this.frame);
         this.frame -= 1;
+        this.showText(this.frame);
         this.body.setAttribute('style', `background-position-x: ${this.frames[this.frame]}%`);
-        console.log(this.frame);
+    }
+
+    showText(frameId) {
+        if (frameId !== 9) {
+            let textEl = document.getElementById(`text-${frameId}`);
+            textEl.setAttribute('style', 'opacity: 1');
+        } else {
+            let textEl1 = document.getElementById(`text-9`);
+            textEl1.setAttribute('style', 'visibility: visible;');
+        }
+
+    }
+
+    hideText(frameId) {
+        let textEl = document.getElementById(`text-${frameId}`);
+        textEl.setAttribute('style', 'visibility: hidden');
     }
 }
 

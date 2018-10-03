@@ -4,6 +4,16 @@
     src: url("../assets/font/klavika-regular-webfont.woff") format('woff');
 }
 
+@font-face {
+    font-family: k-medium;
+    src: url("../assets/font/klavika-medium-webfont.woff") format('woff');
+}
+
+@font-face {
+    font-family: k-light;
+    src: url("../assets/font/klavika-light-webfont.woff") format('woff');
+}
+
 body {
     font-family: k-regular;
     background-color: black;
@@ -17,6 +27,75 @@ body {
 html {
     height: 100%;
 }
+
+.fas {
+    color: white;
+    font-size: xx-large;
+}
+
+.text {
+    font-family: k-light;
+    font-size: 50px;
+    color: white;
+    text-decoration: underline;
+    transition-property: opacity;
+
+}
+
+.text-left {
+    left: 0;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -150px;
+    margin-left: 110px;
+    transition-delay: 2.75s;
+    transition-duration: 0.5s;
+}
+
+.text-right {
+    right: 0;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -150px;
+    margin-right: 110px;
+    transition-delay: 2.75s;
+    transition-duration: 0.5s;
+}
+
+#text-0 {
+    margin-left: 30px;
+    opacity: 1;
+}
+
+#text-9 {
+    position: fixed;
+    top: 0;
+    right: 0 !important;
+    will-change: transform;
+    visibility: hidden;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto !important;
+    left: auto !important;
+    transform: translate(-100%);
+    transition-property: transform;
+    transition-delay: 2s;
+    transition-duration: 3s;
+}
+
+#text-1,
+#text-2,
+#text-3,
+#text-4,
+#text-5,
+#text-6,
+#text-7,
+#text-8 {
+    opacity: 0;
+}
+
+
 
 #next {
     cursor: pointer;
