@@ -47,9 +47,18 @@ body, html {
     background-image: url("../assets/img/overlay.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-x: 15%;
     height: 100%;
     opacity: 1;
     transition: opacity 4s ease 4s;
+}
+
+#monk {
+    display: table-cell;
+    text-align: center;
+    height: 1000px;
+    width: 2000px;
+    vertical-align: middle;
 }
 
 .fas {
