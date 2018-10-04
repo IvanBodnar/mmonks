@@ -4,6 +4,9 @@ class Move {
         this.body = document.querySelector('#background');
         this.next = this.next.bind(this);
         this.prev = this.prev.bind(this);
+        this.nextArrow = document.getElementById('next');
+        this.prevArrow = document.getElementById('prev');
+        this.prevArrow.hidden = true;
         this.frame = 0;
         this.frames = {
             0: 0,
@@ -15,11 +18,15 @@ class Move {
             6: 80,
             7: 100,
             8: 100,
-            9: 115
+            9: 114
         };
     }
 
     next() {
+        if (this.frame === 8) {
+            this.nextArrow.hidden = true;
+        }
+        this.prevArrow.hidden = false;
         this.hideText(this.frame);
         this.frame += 1;
         this.showText(this.frame);
@@ -27,6 +34,10 @@ class Move {
     }
 
     prev() {
+        if (this.frame === 1) {
+            this.prevArrow.hidden = true;
+        }
+        this.nextArrow.hidden = false;
         this.hideText(this.frame);
         this.frame -= 1;
         this.showText(this.frame);
@@ -51,6 +62,7 @@ class Move {
 }
 
 window.onload = () => {
+    document.getElementById('monk').setAttribute('style', 'height: 1000px');
     document.getElementById('wrapper').setAttribute('style', 'opacity: 1');
     document.getElementById('background').setAttribute('style', 'opacity: 1');
     const overlayImg = document.getElementById('overlay-img');

@@ -56,9 +56,10 @@ body, html {
 #monk {
     display: table-cell;
     text-align: center;
-    height: 1000px;
+    height: 3000px;
     width: 2000px;
     vertical-align: middle;
+    transition: height 2s;
 }
 
 .fas {
@@ -109,7 +110,7 @@ body, html {
     position: fixed;
     top: 0;
     right: 0 !important;
-    will-change: transform;
+    margin-right: 20px;
     opacity: 0;
     transition: opacity 4s ease 2s;
 }
