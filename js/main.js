@@ -50,11 +50,17 @@ class Move {
     }
 }
 
+window.onload = () => {
+    document.getElementById('wrapper').setAttribute('style', 'opacity: 1');
+    document.getElementById('background').setAttribute('style', 'opacity: 1');
+    const overlayImg = document.getElementById('overlay-img');
+    overlayImg.setAttribute('style', 'opacity: 0');
+    setTimeout(() => {
+        overlayImg.remove();
+    }, 7000)
+};
+
 const move = new Move();
 
 document.getElementById('next').addEventListener('click', move.next);
 document.getElementById('prev').addEventListener('click', move.prev);
-
-window.onload = () => {
-    document.getElementById('wrapper').setAttribute('style', 'opacity: 1');
-};
