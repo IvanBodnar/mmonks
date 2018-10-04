@@ -38,8 +38,8 @@ class Move {
             let textEl = document.getElementById(`text-${frameId}`);
             textEl.setAttribute('style', 'opacity: 1');
         } else {
-            let textEl1 = document.getElementById(`text-9`);
-            textEl1.setAttribute('style', 'visibility: visible;');
+            let textEl9 = document.getElementById(`text-9`);
+            textEl9.setAttribute('style', 'opacity: 1');
         }
 
     }

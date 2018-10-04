@@ -101,14 +101,8 @@ body, html {
     top: 0;
     right: 0 !important;
     will-change: transform;
-    visibility: hidden;
-    -webkit-overflow-scrolling: touch;
-    overflow-y: auto !important;
-    left: auto !important;
-    transform: translate(-100%);
-    transition-property: transform;
-    transition-delay: 2s;
-    transition-duration: 3s;
+    opacity: 0;
+    transition: opacity 4s ease 2s;
 }
 
 #text-1,
@@ -121,8 +115,6 @@ body, html {
 #text-8 {
     opacity: 0;
 }
-
-
 
 #next {
     cursor: pointer;
