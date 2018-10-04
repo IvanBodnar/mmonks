@@ -1,7 +1,7 @@
 
 class Move {
     constructor() {
-        this.body = document.querySelector('body');
+        this.body = document.querySelector('#background');
         this.next = this.next.bind(this);
         this.prev = this.prev.bind(this);
         this.frame = 0;
@@ -54,3 +54,7 @@ const move = new Move();
 
 document.getElementById('next').addEventListener('click', move.next);
 document.getElementById('prev').addEventListener('click', move.prev);
+
+window.onload = () => {
+    document.getElementById('wrapper').setAttribute('style', 'opacity: 1');
+};

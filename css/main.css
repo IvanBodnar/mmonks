@@ -14,18 +14,38 @@
     src: url("../assets/font/klavika-light-webfont.woff") format('woff');
 }
 
-body {
+body, html {
     font-family: k-regular;
     background-color: black;
+    height: 100%;
+    margin: 0;
+}
+
+#wrapper {
+    opacity: 0;
+    transition: opacity 3s;
+    height: 100%;
+}
+
+#background {
     background-image: url("../assets/img/background.jpg");
-    background-size: auto 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     transition-property: background-position;
     transition-duration: 3s;
+    height: 100%;
 }
 
-html {
-    height: 100%;
+#overlay-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 4s;
 }
 
 .fas {
@@ -39,7 +59,6 @@ html {
     color: white;
     text-decoration: underline;
     transition-property: opacity;
-
 }
 
 .text-left {
@@ -65,6 +84,8 @@ html {
 }
 
 #text-0 {
+    position: absolute;
+    top: 0;
     margin-left: 30px;
     opacity: 1;
 }
