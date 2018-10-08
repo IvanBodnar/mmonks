@@ -45,14 +45,8 @@ class Move {
     }
 
     showText(frameId) {
-        if (frameId !== 9) {
-            let textEl = document.getElementById(`text-${frameId}`);
-            textEl.setAttribute('style', 'opacity: 1');
-        } else {
-            let textEl9 = document.getElementById(`text-9`);
-            textEl9.setAttribute('style', 'opacity: 1');
-        }
-
+        let textEl = document.getElementById(`text-${frameId}`);
+        textEl.setAttribute('style', 'opacity: 1');
     }
 
     hideText(frameId) {
